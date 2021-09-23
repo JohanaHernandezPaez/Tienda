@@ -8,9 +8,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Hola Johana esta es una modificación</title>
 </head>
 <body>
+<h2>prueba</h2>
 <%
 /*conexion con=new conexion();
 con.conexionbd();*/
