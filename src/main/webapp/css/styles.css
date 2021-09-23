@@ -1,0 +1,130 @@
+@charset "ISO-8859-1";
+
+body{
+	/*background-image: url("../Imagenes/klipartz.com_2.png");*/
+	background-color:#eeeeee;
+    background-image: url("../images/bg_01.jpg");
+    background-image: radial-gradient(rgb(10, 77, 77), rgb(10, 40, 59));
+
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background:#c2c8d1;
+    border-radius: 1.2rem;
+    width: min-content;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    box-shadow: rgba(12, 12, 12, 0.75) 0px 5px 12px -5px;
+    margin: 0 0 1rem 0;
+  }
+
+
+
+.cont_titulologo{
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+h1{
+	 font-family:Verdana, Geneva, Tahoma, sans-serif ;
+	 font-size: 20px;
+	 text-align:center;
+	 font-weight: lighter;
+}
+
+table{
+    margin:auto;
+	padding: 20px;
+    font-family: sans-serif, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+	background-color: #c2c8d1;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	border-right: darkgray;
+	width: 40%;
+}
+
+td{
+	padding: 0.5em;
+
+}
+.btns{
+	text-decoration: none;
+	margin-left: 1em;
+    padding: 6px;
+	padding-left: 12px;
+	padding-right: 12px;
+    font-weight: 600;
+    font-size: 12px;
+	border-bottom-right-radius: 8px;
+	border-top-left-radius: 8px;
+	background-color: #13aaaa;
+    color: #000000;
+	border-style:none;
+    box-shadow: rgba(12, 12, 12, 0.75) 0px 2px 6px -5px;
+}
+.btns:hover{
+	background-color: #007a7b;
+    color: #000000;
+}
+input{
+	background:none;
+}
+
+.barraGris{
+	background-color: #9297a0;
+	margin:auto;
+    /*display: block;*/
+    height: 20px;
+    width: 40%;
+}
+.txtField_01{
+	border-radius: 12px;
+	border-style: none;
+	background-color: #eeeeee;
+    size: 30;
+}
+.btn_menuPrincipal{
+	text-decoration: none;
+	text-align:center;
+	float: inline-end;
+	margin-left: 1em;
+
+    font-weight: 600;
+    font-size: 12px;
+    color: #000000;
+	border-style:none;
+}
+nav{
+	background-color: #13aaaa;
+	float: right;
+	width: 100%;
+}
+nav li{
+	text-decoration: none;
+	text-align:center;  
+	font-weight: 600;
+    font-size: 12px;
+    color: #000000;
+	border-style:none;
+	display:inline-block;
+	background-color: #13aaaa;
+}
+nav a{
+    text-decoration:none;
+    font-size:14px;
+	height: 20px;
+} 
+
+nav li:hover{
+	background-color:#007a7b;
+	color:#000;
+}
+.segundaVista{
+	background-color: #c2c8d1;
+}
