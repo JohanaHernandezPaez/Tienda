@@ -102,13 +102,14 @@ public class ServletUsuarios extends HttpServlet {
 			usudto = new UsuariosDTO(cedula_usuario, email_usuario, nombre_usuario, usuario, password);
 			usudao = new UsuariosDAO();
 			dat = usudao.actualizar(usudto);
+			
 
 			if (dat > 0) {
 				JOptionPane.showMessageDialog(null, "Linea actualizada");
 				response.sendRedirect("usuarios.jsp");
 			} else {
 				JOptionPane.showMessageDialog(null, "Linea no actualizada");
-				response.sendRedirect("usuarios.jsp");
+				response.sendRedirect("usuarios.jsp");	
 			}
 		}
 

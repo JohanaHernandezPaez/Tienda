@@ -61,11 +61,14 @@ public class UsuariosDAO {
 	public int actualizar(UsuariosDTO usuario) {
 		int x=0;
 		try {
-			ps=cnn.prepareStatement("UPDATE usuarios SET nombre_usuario=? WHERE cedula_usuario=?");
+			ps=cnn.prepareStatement("UPDATE usuarios SET nombre_usuario=?, email_usuario=?, password=?, usuario=? WHERE cedula_usuario=?");
 			ps.setString(1, usuario.getNombre_usuario());
-			ps.setLong(2, usuario.getCedula_usuario());
-			ps.executeUpdate();
-		}
+			ps.setString(2, usuario.getEmail_usuario());
+			ps.setString(3, usuario.getPassword());
+			ps.setString(4, usuario.getUsuario());
+			ps.setLong(5, usuario.getCedula_usuario());
+			x=ps.executeUpdate();
+				}
 		catch(SQLException e) {
 			e.printStackTrace();
 		}
