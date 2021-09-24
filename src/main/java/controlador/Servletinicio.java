@@ -46,8 +46,8 @@ public class Servletinicio extends HttpServlet {
 		//System.out.println("password :"+password);
 		
 		if  (usuario.equals("admininicial")&& password.equals("admin123456")) {
-			System.out.println("Welcome. . . ");
-			JOptionPane.showMessageDialog(null, "Bienvenido al programa");
+			//System.out.println("Welcome. . . ");
+			//JOptionPane.showMessageDialog(null, "Bienvenido al programa");
 			//response.sendRedirect("wellcome.jsp");
 			//
 			response.sendRedirect("vistados.jsp?dato=");

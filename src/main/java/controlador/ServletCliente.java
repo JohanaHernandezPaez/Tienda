@@ -49,7 +49,7 @@ public class ServletCliente extends HttpServlet {
 		ClientesDAO clientesDAO;
 		
 			
-		if (request.getParameter("btncli")!=null) {
+		if (request.getParameter("btninsUsu")!=null) {
 						
 			Cedula_cliente=Integer.parseInt(request.getParameter("cedula_cliente"));
 			Direccion_cliente=request.getParameter("direccion_cliente");
@@ -68,7 +68,7 @@ public class ServletCliente extends HttpServlet {
 			}
 			else {
 				JOptionPane.showMessageDialog(null, "no se inserto la linea");
-				response.sendRedirect("index.jsp");
+				response.sendRedirect("clientes.jsp");
 				
 			}
 			
