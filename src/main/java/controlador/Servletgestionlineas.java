@@ -65,6 +65,10 @@ public class Servletgestionlineas extends HttpServlet {
 	
 		}
 		//consultar un usuario
+		//consultar un usuario
+		//consultar un usuario
+		//consultar un usuario
+		//consultar un usuario
 		if(request.getParameter("btncon")!=null) {
 			String nom;
 			int cod;
