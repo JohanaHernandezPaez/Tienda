@@ -8,17 +8,17 @@
 <meta charset="ISO-8859-1">
 <link href="css/styles.css" type="text/css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Insert title here</title>
+<title>Gestión de clientes</title>
 </head>
 <body>
 	<%
-	String ced = "", nombre = "", email = "", pass = "", usu = "";
+	String ced = "", direccion = "", email = "", nombre = "", telefono = "";
 	if (request.getParameter("co") != null) {
 		ced = request.getParameter("co");
-		nombre = request.getParameter("no");
+		direccion = request.getParameter("di");
 		email = request.getParameter("em");
-		pass = request.getParameter("pa");
-		usu = request.getParameter("us");
+		nombre = request.getParameter("no");
+		telefono = request.getParameter("te");
 	}
 	%>
 
@@ -47,38 +47,38 @@
 						<tr>
 							<td>Dirección:</td>
 							<td><input type="text" name="direccion_cliente"
-								value="<%=email%>" placeholder="Direccion cliente"
+								value="<%=direccion%>" placeholder="Direccion cliente"
 								class="txtField_01"></td>
 						</tr>
 						<tr>
 							<td>Email:</td>
 							<td><input type="text" name="email_cliente"
-								value="<%=nombre%>" placeholder="Email cliente"
+								value="<%=email%>" placeholder="Email cliente"
 								class="txtField_01"></td>
 						</tr>
 						<tr>
 							<td>Nombre:</td>
 							<td><input type="text" name="nombre_cliente"
-								value="<%=usu%>" placeholder="Nombre cliente"
+								value="<%=nombre%>" placeholder="Nombre cliente"
 								class="txtField_01"></td>
 						</tr>
 						<tr>
 							<td>Telefono:</td>
 							<td><input type="text" name="telefono_cliente"
-								value="<%=pass%>" placeholder="telefono cliente"
+								value="<%=telefono%>" placeholder="telefono cliente"
 								class="txtField_01"></td>
 						</tr>
 					</form>
 
 
 					<tr>
-						<td><input type="submit" name="btninsUsu" value="Registrar"
+						<td><input type="submit" name="btninsCli" value="Registrar"
 							class="btns"></td>
-						<td><input type="submit" name="btnconUsu" value="Consultar"
+						<td><input type="submit" name="btnconCli" value="Consultar"
 							class="btns"></td>
-						<td><input type="submit" name="btnactUsu" value="Actualizar"
+						<td><input type="submit" name="btnactCli" value="Actualizar"
 							class="btns"></td>
-						<td><input type="submit" name="btneliUsu" value="Eliminar"
+						<td><input type="submit" name="btneliCli" value="Eliminar"
 							class="btns"></td>
 					</tr>
 

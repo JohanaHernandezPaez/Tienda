@@ -7,16 +7,19 @@ public class ClientesDTO {
 	private String Nombre_cliente;
 	private String Telefono_cliente;
 
-	public  ClientesDTO(long cedula_cliente, String direccion_cliente, String email_cliente, String nombre_cliente, String telefono_cliente) {
-		
-		this.Cedula_cliente=cedula_cliente;
-		this.Direccion_cliente=direccion_cliente;
-		this.Email_cliente=email_cliente;
-		this.Nombre_cliente=nombre_cliente;
-		this.Telefono_cliente=telefono_cliente;
-				
-		
-		
+	public ClientesDTO(long cedula_cliente, String direccion_cliente, String email_cliente, String nombre_cliente,
+			String telefono_cliente) {
+
+		this.Cedula_cliente = cedula_cliente;
+		this.Direccion_cliente = direccion_cliente;
+		this.Email_cliente = email_cliente;
+		this.Nombre_cliente = nombre_cliente;
+		this.Telefono_cliente = telefono_cliente;
+
+	}
+	
+	public ClientesDTO(long cedula_usuario) {
+		this.Cedula_cliente = cedula_usuario;
 	}
 
 	public Long getCedula_cliente() {
