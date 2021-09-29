@@ -14,7 +14,7 @@ public class conexion {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			try {
-				cnn=DriverManager.getConnection("jdbc:mysql://localhost/tienda_generica","root","Beijing123");
+				cnn=DriverManager.getConnection("jdbc:mysql://localhost/tienda","root","G@m3z1996");
 			//JOptionPane.showMessageDialog(null, "Conexion ok");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block

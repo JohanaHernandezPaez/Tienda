@@ -85,6 +85,7 @@
 
 				</table>
 			</form>
+			<a href="vistados.jsp"><img src="atras1.png"  ></a>
 		</div>
 	</main>
 

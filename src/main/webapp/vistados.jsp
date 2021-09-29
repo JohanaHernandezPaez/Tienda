@@ -27,9 +27,16 @@
 					<li><input type="submit" value="Productos" name="btn_Productos" class="btn_menuPrincipal"></li>
 					<li><input type="submit" value="Ventas" name="btn_Ventas" class="btn_menuPrincipal"></li>
 					<li><input type="submit" value="Reportes" name="btn_Reportes" class="btn_menuPrincipal"></li>
+					
 				</ul>
 				<div class="barraGris" style="width: 100%"></div>
 			</nav>
+			<a href="vistados.jsp"><img src="usuarios.png"  ></a>
+			<a href="vistados.jsp"><img src="clientes.png"  ></a>
+			<a href="vistados.jsp"><img src="proveedores.png"  ></a>
+			<a href="vistados.jsp"><img src="productos.png"  ></a>
+			<a href="vistados.jsp"><img src="ventas.png"  ></a>
+			<a href="vistados.jsp"><img src="informes.png"  ></a>
 			</div>
 			
 			</main>

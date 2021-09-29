@@ -4,6 +4,10 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
+import org.apache.catalina.connector.Response;
+
+import jakarta.security.auth.message.callback.PrivateKeyCallback.Request;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -70,8 +74,8 @@ public class ServletUsuarios extends HttpServlet {
 
 			}
 		}
-
-		// consultar un usuario
+				
+			// consultar un usuario
 		if(request.getParameter("btnconUsu")!=null) {
 			String nom, email, usu, pass;
 			long ced;

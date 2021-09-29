@@ -65,7 +65,7 @@ public class ServletCliente extends HttpServlet {
 
 			if (x == true) {
 				JOptionPane.showMessageDialog(null, "se inserto la linea");
-				response.sendRedirect("vistados.jsp");
+				response.sendRedirect("clientes.jsp");
 
 			} else {
 				JOptionPane.showMessageDialog(null, "no se inserto la linea");
