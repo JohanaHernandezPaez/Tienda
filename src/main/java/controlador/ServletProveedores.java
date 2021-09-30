@@ -63,12 +63,12 @@ public class ServletProveedores extends HttpServlet {
 						
 			if(x==true) {
 				JOptionPane.showMessageDialog(null, "se inserto la linea");
-				response.sendRedirect("vistados.jsp");
+				response.sendRedirect("proveedores.jsp");
 				
 			}
 			else {
 				JOptionPane.showMessageDialog(null, "no se inserto la linea");
-				response.sendRedirect("index.jsp");
+				response.sendRedirect("proveedores.jsp");
 				
 			}
 			
@@ -98,10 +98,44 @@ public class ServletProveedores extends HttpServlet {
 					}
 				}
 		
+				// actualizacion de proveedores
+				if (request.getParameter("btnactPro") != null) {
+					int dat;
+					
+					Nit_Proveedor=Long.parseLong(request.getParameter("nitproveedor"));
+					Nombre_Proveedor=request.getParameter("nombre_proveedor");
+					Direccion_Proveedor=request.getParameter("direccion_proveedor");
+					Telefono_Proveedor=request.getParameter("telefono_proveedor");
+					Ciudad_Proveedor=request.getParameter("ciudad_proveedor");
+					proveedoresDTO=new ProveedoresDTO(Nit_Proveedor,Nombre_Proveedor,Direccion_Proveedor,Telefono_Proveedor,Ciudad_Proveedor);
+					proveedoresDAO = new ProveedoresDAO();
+					dat = proveedoresDAO.actualizar(proveedoresDTO);
+
+					if (dat > 0) {
+						JOptionPane.showMessageDialog(null, "Linea actualizada");
+						response.sendRedirect("proveedores.jsp");
+					} else {
+						JOptionPane.showMessageDialog(null, "Linea no actualizada");
+						response.sendRedirect("proveedores.jsp");
+					}
+				}
 		
 		
-		
-		
+				// Eliminar proveedor
+
+				if (request.getParameter("btneliPro") != null) {
+					int dat;
+					Nit_Proveedor=Long.parseLong(request.getParameter("nitproveedor"));
+					proveedoresDTO =new ProveedoresDTO(Nit_Proveedor);
+					proveedoresDAO= new ProveedoresDAO();dat = proveedoresDAO.eliminar(proveedoresDTO);
+					if (dat > 0) {
+						JOptionPane.showMessageDialog(null, "Linea eliminada");
+						response.sendRedirect("proveedores.jsp");
+					} else {
+						JOptionPane.showMessageDialog(null, "Linea no eliminada");
+						response.sendRedirect("proveedores.jsp");
+					}
+				}
 		
 		
 	}

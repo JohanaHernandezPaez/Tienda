@@ -1,30 +1,28 @@
 package modelo;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
-import controlador.conexion;
-
 public class ProveedoresDTO {
 	private Long nitproveedor;
 	private String nombre_proveedor;
 	private String direccion_proveedor;
 	private String telefono_proveedor;
 	private String ciudad_proveedor;
-	
-	
 
-	public ProveedoresDTO(Long nitproveedor) {		
+	public ProveedoresDTO(Long nitproveedor, String nombre_proveedor, String direccion_proveedor,
+			String telefono_proveedor, String ciudad_proveedor) {
+		this.nitproveedor = nitproveedor;
+		this.nombre_proveedor = nombre_proveedor;
+		this.direccion_proveedor = direccion_proveedor;
+		this.telefono_proveedor = telefono_proveedor;
+		this.ciudad_proveedor = ciudad_proveedor;
+	}
+
+	public ProveedoresDTO(Long nitproveedor) {
 		this.nitproveedor = nitproveedor;
 	}
-	
+
 	public Long getNitproveedor() {
 		return nitproveedor;
 	}
-	
-	
-	
 
 	public void setNitproveedor(Long nitproveedor) {
 		this.nitproveedor = nitproveedor;
@@ -62,16 +60,4 @@ public class ProveedoresDTO {
 		this.ciudad_proveedor = ciudad_proveedor;
 	}
 
-	public ProveedoresDTO(Long nitproveedor, String nombre_proveedor, String direccion_proveedor,
-			String telefono_proveedor, String ciudad_proveedor) {
-		super();
-		this.nitproveedor = nitproveedor;
-		this.nombre_proveedor = nombre_proveedor;
-		this.direccion_proveedor = direccion_proveedor;
-		this.telefono_proveedor = telefono_proveedor;
-		this.ciudad_proveedor = ciudad_proveedor;
-	}
-
-
-	
 }

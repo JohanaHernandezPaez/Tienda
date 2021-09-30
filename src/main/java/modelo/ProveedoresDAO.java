@@ -49,12 +49,12 @@ public class ProveedoresDAO {
 		}
 		return proveedoresDTO;
 	}
-	//actualizar cliente
+	//actualizar proveedor
 	
 		public int actualizar(ProveedoresDTO proveedores) {
 			int x=0;
 			try {
-				ps=cnn.prepareStatement("UPDATE proveedores SET nitproveedor=?, nombre_proveedor=?, direccion_proveedor=?, telefono_proveedor=? WHERE nitproveedor=?");
+				ps=cnn.prepareStatement("UPDATE proveedores SET nombre_proveedor=?, direccion_proveedor=?, telefono_proveedor=?, ciudad_proveedor=?  WHERE nitproveedor=?");
 				ps.setString(1, proveedores.getNombre_proveedor());
 				ps.setString(2,proveedores.getDireccion_proveedor());
 				ps.setString(3, proveedores.getTelefono_proveedor());
@@ -68,7 +68,18 @@ public class ProveedoresDAO {
 			return x;
 			
 		}
-
+		
+		public int eliminar(ProveedoresDTO proveedores) {
+			int x=0;
+			try {
+				ps=cnn.prepareStatement("DELETE FROM proveedores WHERE nitproveedor=?");
+				ps.setLong(1, proveedores.getNitproveedor());
+				x=ps.executeUpdate();
+			}catch(SQLException e) {
+				e.printStackTrace();
+			}
+			return x;
+		}
 	
 	
 }
