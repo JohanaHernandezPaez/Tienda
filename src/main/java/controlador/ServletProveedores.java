@@ -1,6 +1,7 @@
 package controlador;
 
 import java.io.IOException;
+import java.rmi.registry.Registry;
 
 import javax.swing.JOptionPane;
 
@@ -9,13 +10,11 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import modelo.ClientesDAO;
+import modelo.ClientesDTO;
 import modelo.ProveedoresDAO;
 import modelo.ProveedoresDTO;
 
-
-/**
- * Servlet implementation class ServletProveedores
- */
 @WebServlet("/ServletProveedores")
 public class ServletProveedores extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -42,16 +41,14 @@ public class ServletProveedores extends HttpServlet {
 		boolean x;
 		doGet(request, response);
 		long Nit_Proveedor;
-		String Nombre_Proveedor;
-		String Direccion_Proveedor;
-		String Telefono_Proveedor;
-		String Ciudad_Proveedor;
+		String Nombre_Proveedor,Direccion_Proveedor,Telefono_Proveedor,Ciudad_Proveedor;
 		
-		ProveedoresDTO ProveeDTO;
-		ProveedoresDAO ProveeDAO;
+		ProveedoresDTO proveedoresDTO;
+		ProveedoresDAO proveedoresDAO;
+		ProveedoresDTO registro;
 		
 			
-		if (request.getParameter("btn_Proveedores")!=null) {
+		if (request.getParameter("btninsPro")!=null) {
 						
 			Nit_Proveedor=Long.parseLong(request.getParameter("nitproveedor"));
 			Nombre_Proveedor=request.getParameter("nombre_proveedor");
@@ -59,10 +56,10 @@ public class ServletProveedores extends HttpServlet {
 			Telefono_Proveedor=request.getParameter("telefono_proveedor");
 			Ciudad_Proveedor=request.getParameter("ciudad_proveedor");
 						
-			ProveeDTO=new ProveedoresDTO(Nit_Proveedor, Nombre_Proveedor, Direccion_Proveedor, Telefono_Proveedor, Ciudad_Proveedor);
-			ProveeDAO=new ProveedoresDAO();
+			proveedoresDTO=new ProveedoresDTO(Nit_Proveedor, Nombre_Proveedor, Direccion_Proveedor, Telefono_Proveedor, Ciudad_Proveedor);
+			proveedoresDAO=new ProveedoresDAO();
 			
-			x=ProveeDAO.insertarproveedor(ProveeDTO);
+			x=proveedoresDAO.insertarproveedor(proveedoresDTO);
 						
 			if(x==true) {
 				JOptionPane.showMessageDialog(null, "se inserto la linea");
@@ -76,6 +73,34 @@ public class ServletProveedores extends HttpServlet {
 			}
 			
 		}
+		
+		// consultar un proveedor
+				if (request.getParameter("btnconPro") != null) {
+					String np, dp, tp, cp;
+					long nt;
+					
+					nt = Long.parseLong(request.getParameter("nitproveedor"));
+					proveedoresDTO =new ProveedoresDTO(nt);
+					proveedoresDAO =new ProveedoresDAO();
+					registro = proveedoresDAO.consultar(proveedoresDTO);
+
+					if (registro != null) {
+						nt = registro.getNitproveedor();
+						np = registro.getNombre_proveedor();
+						dp = registro.getDireccion_proveedor();
+						tp = registro.getTelefono_proveedor();
+						cp = registro.getCiudad_proveedor();
+						response.sendRedirect(
+								"proveedores.jsp?nt=" + nt + "&&np=" + np + "&&dp=" + dp + "&&tp=" + tp + "&&cp=" + cp);
+					} else {
+						JOptionPane.showMessageDialog(null, "No hay datos");
+						response.sendRedirect("proveedores.jsp");
+					}
+				}
+		
+		
+		
+		
 		
 		
 		

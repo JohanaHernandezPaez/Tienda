@@ -78,6 +78,7 @@ public class ServletCliente extends HttpServlet {
 		if (request.getParameter("btnconCli") != null) {
 			String dir, email, nom, tel;
 			long ced;
+			
 			ced = Long.parseLong(request.getParameter("cedula_cliente"));
 			clientesDTO = new ClientesDTO(ced);
 			clientesDAO = new ClientesDAO();

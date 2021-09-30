@@ -13,9 +13,18 @@ public class ProveedoresDTO {
 	private String telefono_proveedor;
 	private String ciudad_proveedor;
 	
+	
+
+	public ProveedoresDTO(Long nitproveedor) {		
+		this.nitproveedor = nitproveedor;
+	}
+	
 	public Long getNitproveedor() {
 		return nitproveedor;
 	}
+	
+	
+	
 
 	public void setNitproveedor(Long nitproveedor) {
 		this.nitproveedor = nitproveedor;
@@ -62,5 +71,7 @@ public class ProveedoresDTO {
 		this.telefono_proveedor = telefono_proveedor;
 		this.ciudad_proveedor = ciudad_proveedor;
 	}
+
+
 	
 }
