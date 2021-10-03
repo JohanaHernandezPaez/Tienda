@@ -22,63 +22,68 @@ import modelo.ProductosDAO;
 public class ServletProductos extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * Default constructor. 
-     */
-    public ServletProductos() {
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * Default constructor.
+	 */
+	public ServletProductos() {
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-		
-		Part archivo=request.getPart("archivo");
-		//String Url="C:\\\\Users\\\\user\\\\eclipse-workspace\\\\Proyectociclo3v12\\\\src\\\\main\\\\webapp\\\\documentos";
-		String Url="C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/";
-		if(request.getParameter("cargar")!=null) {
-			try {
-				//clases para trabajar archivos InputStream File y FileOutputStream
-				InputStream file=archivo.getInputStream();
-				File copia=new File(Url+"productos.csv");
-				FileOutputStream escribir=new FileOutputStream(copia);
-				int num=file.read();
-				//el ultimo byte termina en 0 cuando va a -1 termina la lectura.
-				while(num !=-1) {
-					//write genera la copia del archivo.
-					escribir.write(num);
-					num=file.read();
-				}
-				file.close();
-				escribir.close();
-				
-				JOptionPane.showMessageDialog(null, "se cargó el archivo correctamente");
-				boolean x;
-				ProductosDAO prodao=new ProductosDAO();
-				x=prodao.cargarproductos(Url+"productos.csv");
-				if(x) {
-					JOptionPane.showMessageDialog(null, "datos cargados en la base de datos");
-				}
-				else
-				{
-					JOptionPane.showMessageDialog(null, "No se cargaron los datos");
-				}
-			} catch (Exception e) {
-				JOptionPane.showMessageDialog(null, "error al cargar el archivo");
-			}
-			
-		}
-	}
 
+		Part archivo = request.getPart("archivo");
+		// String
+		// Url="C:\\\\Users\\\\user\\\\eclipse-workspace\\\\Proyectociclo3v12\\\\src\\\\main\\\\webapp\\\\documentos";
+		String Url = "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/";
+
+		
+			if (request.getParameter("cargar") != null) {
+				try {
+					// clases para trabajar archivos InputStream File y FileOutputStream
+					InputStream file = archivo.getInputStream();
+					File copia = new File(Url + "productos.csv");
+					FileOutputStream escribir = new FileOutputStream(copia);
+					int num = file.read();
+					// el ultimo byte termina en 0 cuando va a -1 termina la lectura.
+					while (num != -1) {
+						// write genera la copia del archivo.
+						escribir.write(num);
+						num = file.read();
+					}
+					file.close();
+					escribir.close();
+
+					JOptionPane.showMessageDialog(null, "se cargó el archivo correctamente");
+					boolean x;
+					ProductosDAO prodao = new ProductosDAO();
+					x = prodao.cargarproductos(Url + "productos.csv");
+					if (x) {
+						JOptionPane.showMessageDialog(null, "datos cargados en la base de datos");
+					} else {
+						JOptionPane.showMessageDialog(null, "No se cargaron los datos");
+					}
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(null, "error al cargar el archivo");
+				}
+
+			}
+		}
+	
 }
