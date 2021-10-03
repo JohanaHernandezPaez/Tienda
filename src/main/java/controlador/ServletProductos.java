@@ -8,6 +8,7 @@ import java.io.InputStream;
 import javax.swing.JOptionPane;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -19,8 +20,10 @@ import modelo.ProductosDAO;
  * Servlet implementation class ServletProductos
  */
 @WebServlet("/ServletProductos")
+@MultipartConfig
 public class ServletProductos extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
 
 	/**
 	 * Default constructor.
@@ -76,11 +79,14 @@ public class ServletProductos extends HttpServlet {
 					x = prodao.cargarproductos(Url + "productos.csv");
 					if (x) {
 						JOptionPane.showMessageDialog(null, "datos cargados en la base de datos");
+						response.sendRedirect("vistados.jsp");
 					} else {
 						JOptionPane.showMessageDialog(null, "No se cargaron los datos");
+						response.sendRedirect("productos.jsp");
 					}
 				} catch (Exception e) {
 					JOptionPane.showMessageDialog(null, "error al cargar el archivo");
+					response.sendRedirect("productos.jsp");
 				}
 
 			}

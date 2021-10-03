@@ -12,7 +12,7 @@ HttpSession objsesion=request.getSession();
 String uss=(String)objsesion.getAttribute("llevausuario");
 %>
 <div><%=uss%></div>
-<form action="productos" method="post" enctype="multipart/form-data">
+<form action="ServletProductos" method="post" enctype="multipart/form-data">
 <input type="file" name="archivo" value="">
 <input type="submit" name="cargar" value="add Archivo">
 </form>
