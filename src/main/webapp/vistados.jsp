@@ -31,12 +31,12 @@
 				</ul>
 				<div class="barraGris" style="width: 100%"></div>
 			</nav>
-			<a href="vistados.jsp"><img src="usuarios.png"  ></a>
-			<a href="vistados.jsp"><img src="clientes.png"  ></a>
-			<a href="vistados.jsp"><img src="proveedores.png"  ></a>
-			<a href="vistados.jsp"><img src="productos.png"  ></a>
-			<a href="vistados.jsp"><img src="ventas.png"  ></a>
-			<a href="vistados.jsp"><img src="informes.png"  ></a>
+			<a href="vistados.jsp"><img src="img/usuarios.png"  ></a>
+			<a href="vistados.jsp"><img src="img/clientes.png"  ></a>
+			<a href="vistados.jsp"><img src="img/proveedores.png"  ></a>
+			<a href="vistados.jsp"><img src="img/productos.png"  ></a>
+			<a href="vistados.jsp"><img src="img/ventas.png"  ></a>
+			<a href="vistados.jsp"><img src="img/informes.png"  ></a>
 			</div>
 			
 			</main>
