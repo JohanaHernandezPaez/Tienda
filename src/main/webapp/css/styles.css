@@ -23,8 +23,7 @@ main {
     box-shadow: rgba(12, 12, 12, 0.75) 0px 5px 12px -5px;
     margin: 0 0 1rem 0;
   }
-
-
+  
 
 .cont_titulologo{
 	margin-top: 2em;
@@ -127,4 +126,9 @@ nav li:hover{
 }
 .segundaVista{
 	background-color: #c2c8d1;
+}
+.centradoFlex{
+	 display: flex;
+    justify-content: center;
+    margin-top:20px;
 }
