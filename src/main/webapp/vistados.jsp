@@ -25,7 +25,7 @@
 					<li><form action ="clientes.jsp"><input type="submit" value="Clientes" name="btncli" class="btn_menuPrincipal"></form></li>
 					<li><form action="proveedores.jsp"><input type="submit" value="Proveedores" name="btn_Proveedores" class="btn_menuPrincipal"></form></li>
 					<li><form action="productos.jsp"><input type="submit" value="Productos" name="btn_Productos" class="btn_menuPrincipal"></form></li>
-					<li><input type="submit" value="Ventas" name="btn_Ventas" class="btn_menuPrincipal"></li>
+					<li><form action="ventas.jsp"><input type="submit" value="Ventas" name="btn_Ventas" class="btn_menuPrincipal"></form></li>
 					<li><input type="submit" value="Reportes" name="btn_Reportes" class="btn_menuPrincipal"></li>
 					
 				</ul>
