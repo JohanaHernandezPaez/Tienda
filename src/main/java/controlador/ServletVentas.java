@@ -213,7 +213,7 @@ double tot,tot1,tot2,res,res1,res2,totalsiniva,totaliva,totaldesiva;
 					    x=dedao.Inserta_Cliente(dd);
 					    if(x) {
 					    	JOptionPane.showMessageDialog(null, "detalle insertado");
-					    	response.sendRedirect("menuprincipal.jsp");
+					    	response.sendRedirect("vistados.jsp");
 					    }
 				 }
 			     else {

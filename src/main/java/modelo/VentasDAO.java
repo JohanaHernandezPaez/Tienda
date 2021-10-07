@@ -15,7 +15,7 @@ public boolean insertarventa(VentasDTO ven){
 		boolean resultado=false;
 		try{
 		
-	    ps =cnn.prepareStatement("Insert Into ventas(cedula_cliente,cedula_usuario,iva_venta,total_venta,valor_venta) value(?,?,?,?,?)");
+	    ps =cnn.prepareStatement("Insert Into ventas(cedula_cliente,cedula_usuario,ivaventa,total_venta,valor_venta) value(?,?,?,?,?)");
 		ps.setLong(1, ven.getCedula_cliente());
 		ps.setLong(2, ven.getCedula_Usuario());
 		ps.setDouble(3, ven.getIvaventa());
@@ -31,7 +31,7 @@ public boolean insertarventa(VentasDTO ven){
 	
 public  VentasDTO consultarcodventa() {
 	try {
-		ps=cnn.prepareStatement("SELECT MAX(codigo_venta),cedula_cliente,cedula_usuario,iva_venta,total_venta,valor_venta AS id FROM ventas");
+		ps=cnn.prepareStatement("SELECT MAX(codigo_venta),cedula_cliente,cedula_usuario,ivaventa,total_venta,valor_venta AS id FROM ventas");
 		rs=ps.executeQuery();
 		if(rs.next()) {
 			
