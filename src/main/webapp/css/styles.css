@@ -99,11 +99,11 @@ input{
     color: #000000;
 	border-style:none;
 }
-nav{
-	background-color: #13aaaa;
-	float: right;
-	width: 100%;
-}
+/*nav{
+	/*background-color: #13aaaa;*/
+	/*float: right;
+	/*width: 100%;
+/*}*/
 nav li{
 	text-decoration: none;
 	text-align:center;  
@@ -112,7 +112,7 @@ nav li{
     color: #000000;
 	border-style:none;
 	display:inline-block;
-	background-color: #13aaaa;
+	/*background-color: #13aaaa;*/
 }
 nav a{
     text-decoration:none;
@@ -121,7 +121,7 @@ nav a{
 } 
 
 nav li:hover{
-	background-color:#007a7b;
+	background-color:#9297a0;
 	color:#000;
 }
 .segundaVista{
@@ -131,4 +131,8 @@ nav li:hover{
 	 display: flex;
     justify-content: center;
     margin-top:20px;
+}
+.img_menu{
+	width:4em;
+	margin:2em;
 }
