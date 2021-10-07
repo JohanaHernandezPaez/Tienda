@@ -17,26 +17,25 @@
 					Gen&eacute;rica</b>
 			</h1>
 			<main>
-			<div >
+			<div class="card">
 			<nav id="nav">
 				<ul>
+					<table>
+					<tr><td><li><form action ="usuarios.jsp"><input type="submit" value="Usuarios" name="btn_usu" class="btn_menuPrincipal"><a href="usuarios.jsp"><img src="img/usuarios.png" class="img_menu" ></a></form></li>
+					<li><form action ="clientes.jsp"><input type="submit" value="Clientes" name="btncli" class="btn_menuPrincipal"><a href="clientes.jsp"><img src="img/clientes.png"  class="img_menu"></a></form></li>
+					</td><td>
+					<li><form action="proveedores.jsp"><input type="submit" value="Proveedores" name="btn_Proveedores" class="btn_menuPrincipal"><a href="proveedores.jsp"><img src="img/proveedores.png" class="img_menu" ></a></form></li>
 					
-					<li><form action ="usuarios.jsp"><input type="submit" value="Usuarios" name="btn_usu" class="btn_menuPrincipal"></form></li>
-					<li><form action ="clientes.jsp"><input type="submit" value="Clientes" name="btncli" class="btn_menuPrincipal"></form></li>
-					<li><form action="proveedores.jsp"><input type="submit" value="Proveedores" name="btn_Proveedores" class="btn_menuPrincipal"></form></li>
-					<li><form action="productos.jsp"><input type="submit" value="Productos" name="btn_Productos" class="btn_menuPrincipal"></form></li>
-					<li><form action="ventas.jsp"><input type="submit" value="Ventas" name="btn_Ventas" class="btn_menuPrincipal"></form></li>
-					<li><input type="submit" value="Reportes" name="btn_Reportes" class="btn_menuPrincipal"></li>
+					<li><form action="productos.jsp"><input type="submit" value="Productos" name="btn_Productos" class="btn_menuPrincipal"><a href="productos.jsp"><img src="img/productos.png" class="img_menu" ></a></form></li>
+					</td><td>
+					<li><form action="ventas.jsp"><input type="submit" value="Ventas" name="btn_Ventas" class="btn_menuPrincipal"><a href="ventas.jsp"><img src="img/ventas.png" class="img_menu" ></a></form></li>
+					<li><input type="submit" value="Reportes" name="btn_Reportes" class="btn_menuPrincipal"><a href="vistados.jsp"><img src="img/informes.png"  class="img_menu"></a></li>
+					</td></tr></table>
 					
 				</ul>
-				<div class="barraGris" style="width: 100%"></div>
+				
 			</nav>
-			<a href="vistados.jsp"><img src="img/usuarios.png"  ></a>
-			<a href="vistados.jsp"><img src="img/clientes.png"  ></a>
-			<a href="vistados.jsp"><img src="img/proveedores.png"  ></a>
-			<a href="vistados.jsp"><img src="img/productos.png"  ></a>
-			<a href="vistados.jsp"><img src="img/ventas.png"  ></a>
-			<a href="vistados.jsp"><img src="img/informes.png"  ></a>
+		
 			</div>
 			
 			</main>
