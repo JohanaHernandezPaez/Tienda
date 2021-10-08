@@ -41,7 +41,7 @@ table{
 	padding: 20px;
     font-family: sans-serif, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
-	background-color: #c2c8d1;
+	/*background-color: #c2c8d1;*/
 	border-bottom-left-radius: 6px;
 	border-bottom-right-radius: 6px;
 	border-right: darkgray;
@@ -136,7 +136,11 @@ nav li:hover{
 	width:4em;
 	margin:2em;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> branch 'master' of https://github.com/JohanaHernandezPaez/Tienda.git
 =======
 }
 >>>>>>> branch 'master' of https://github.com/JohanaHernandezPaez/Tienda.git
