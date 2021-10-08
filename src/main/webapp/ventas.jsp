@@ -10,6 +10,14 @@
 <link href="css/styles.css" type="text/css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Gestión de ventas</title>
+<style>
+body {
+  background-image: url('img/bg_02.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
 </head>
 <header id="Encabezado" class="Encabezado">
 		<div class="cont_titulologo">

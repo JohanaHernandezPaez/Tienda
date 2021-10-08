@@ -8,7 +8,15 @@
 <meta charset="ISO-8859-1">
 <link href="css/styles.css" type="text/css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Gestión Proveedores</title>
+<title>Gestión de Proveedores</title>
+<style>
+body {
+  background-image: url('img/bg_04.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
 </head>
 <body>
 	<%
