@@ -6,6 +6,14 @@
 <meta charset="ISO-8859-1">
 <link href="css/styles.css" type="text/css" rel="stylesheet" />
 <title>Segunda Vista</title>
+<style>
+body {
+  background-image: url('img/bg_01.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
 </head>
 <body>
 <header id="SegundaVista" class="SegundaVista">

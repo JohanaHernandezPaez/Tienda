@@ -8,7 +8,15 @@
 <meta charset="ISO-8859-1">
 <link href="css/styles.css" type="text/css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Insert title here</title>
+<title>Gestión de Usuarios</title>
+<style>
+body {
+  background-image: url('img/bg_03.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
 </head>
 <body>
 	<%

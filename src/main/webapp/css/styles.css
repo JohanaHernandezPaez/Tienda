@@ -13,7 +13,7 @@ main {
 }
 
 .card {
-    background:#c2c8d1;
+    background:rgba(194, 200, 209, 0.5);
     border-radius: 1.2rem;
     width: min-content;
     overflow: hidden;
@@ -135,4 +135,8 @@ nav li:hover{
 .img_menu{
 	width:4em;
 	margin:2em;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> branch 'master' of https://github.com/JohanaHernandezPaez/Tienda.git

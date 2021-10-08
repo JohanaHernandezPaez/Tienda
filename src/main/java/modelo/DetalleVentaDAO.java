@@ -21,7 +21,7 @@ public class DetalleVentaDAO {
 		//usu=  buscarcliente(u);
 		//if(usu!=null) {
 			
-			ps =cnn.prepareStatement("Insert Into detalle_ventas(cantidad_producto,codigo_producto,codigo_venta,valor_venta,valor_iva, valor_total)   value(?,?,?,?,?,?);");
+			ps =cnn.prepareStatement("Insert Into detalle_ventas(cantidad_producto,codigo_producto,codigo_venta,valor_venta,valoriva, valor_total)   value(?,?,?,?,?,?);");
 			ps.setInt(1, det.getCantidadproducto());
 			ps.setLong(2, det.getCodigoproducto());
 			ps.setLong(3, det.getCodigoventa());
