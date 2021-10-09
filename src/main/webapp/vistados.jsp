@@ -6,7 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <link href="css/styles.css" type="text/css" rel="stylesheet" />
-<title>Segunda Vista</title>
+<title>Menú Principal</title>
 <style>
 body {
   background-image: url('img/bg_01.jpg');
@@ -32,7 +32,7 @@ String nombre=(String)objsesion.getAttribute("vs");
 			<nav id="nav">
 				<ul>
 					<table>
-					<label>Bienvenido <%=nombre%></label>
+					<label><strong>Bienvenido <%=nombre%></strong></label>
 					<tr><td><li><form action ="usuarios.jsp"><input type="submit" value="Usuarios" name="btn_usu" class="btn_menuPrincipal"><a href="usuarios.jsp"><img src="img/usuarios.png" class="img_menu" ></a></form></li>
 					<li><form action ="clientes.jsp"><input type="submit" value="Clientes" name="btncli" class="btn_menuPrincipal"><a href="clientes.jsp"><img src="img/clientes.png"  class="img_menu"></a></form></li>
 					</td><td>
@@ -47,7 +47,7 @@ String nombre=(String)objsesion.getAttribute("vs");
 				</ul>
 				
 			</nav>
-		
+			<a href="login.jsp"><img src="img/atras1.png"  ></a>
 			</div>
 			
 			</main>

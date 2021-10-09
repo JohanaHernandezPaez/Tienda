@@ -35,7 +35,7 @@ public  VentasDTO consultarcodventa() {
 		rs=ps.executeQuery();
 		if(rs.next()) {
 			
-			JOptionPane.showMessageDialog(null, "En el if");
+			//JOptionPane.showMessageDialog(null, "En el if");
 			 ven=new VentasDTO(rs.getLong(1), rs.getLong(2), rs.getLong(3), rs.getDouble(4), rs.getDouble(5),rs.getDouble(6));
 		
 		}

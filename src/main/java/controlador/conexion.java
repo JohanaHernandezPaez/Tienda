@@ -15,14 +15,13 @@ public class conexion {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			try {
 				cnn=DriverManager.getConnection("jdbc:mysql://localhost/tienda_generica","root","Beijing123");
-			JOptionPane.showMessageDialog(null, "Conexion ok");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+			JOptionPane.showMessageDialog(null, "problemas en la conexión");
 			e.printStackTrace();
 		}return cnn;
 

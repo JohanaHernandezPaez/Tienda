@@ -53,7 +53,7 @@ response.getWriter().append("Served at: ").append(request.getContextPath());
 			UsuariosDTO usu=new UsuariosDTO(usuario, password);
 			LoginDAO lodao=new LoginDAO();
 			usudto=lodao.login(usu);
-			//System.out.println(usudto.getNombre_usuario());
+			//System.out.println(usudto.getCedula_usuario());
 			
 			if  (usudto.getUsuario().equals(usuario) && usudto.getPassword().equals(password)) {
 				//System.out.println("Welcome. . . ");
@@ -62,6 +62,8 @@ response.getWriter().append("Served at: ").append(request.getContextPath());
 				//primer parametro de sesion la variable de sesion, el valor usudto es el valor
 				String uss=usudto.getUsuario();
 				sesion.setAttribute("vs", uss);
+				sesion.setAttribute("datos", usudto);
+				
 				response.sendRedirect("vistados.jsp");
 				
 				
