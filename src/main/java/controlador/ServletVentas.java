@@ -174,16 +174,15 @@ double tot,tot1,tot2,res,res1,res2,totalsiniva,totaliva,totaldesiva;
 					  
 					     can=cant1;
 					     if(can>0) {
-					   
 						    cv=venn.getCodigo_venta();
 						    iv=ven.getIvaventa();
 						    dtv=ven.getTotalventa();
 						    dvv=ven.getValorventa();
-						    dd=new DetalleVentaDTO(can, cv, codpro, total3, iva, iva);
+						    dd=new DetalleVentaDTO(can, cv, codpro, totaliva, totalsiniva, totaldesiva);
 						    dedao=new DetalleVentaDAO();
 						    x=dedao.Inserta_Cliente(dd);
 						    	if(x) {
-						    		JOptionPane.showMessageDialog(null, "detalle de venta insertado");
+						    		JOptionPane.showMessageDialog(null, "Producto "+ codpro + " insertado" );
 						    	}
 					     }
 					     
@@ -198,11 +197,12 @@ double tot,tot1,tot2,res,res1,res2,totalsiniva,totaliva,totaldesiva;
 							    iv=ven.getIvaventa();
 							    dtv=ven.getTotalventa();
 							    dvv=ven.getValorventa();
-							    dd=new DetalleVentaDTO(can, cv, codpro, total3, iva, iva);
+							    long codpro1=Long.parseLong(request.getParameter("codigo1"));
+							    dd=new DetalleVentaDTO(can, cv, codpro1, totaliva, totalsiniva, totaldesiva);
 							    dedao=new DetalleVentaDAO();
 							    x=dedao.Inserta_Cliente(dd);
 							    	if(x) {
-							    		JOptionPane.showMessageDialog(null, "detalle insertado");
+							    		JOptionPane.showMessageDialog(null,  "Producto "+ codpro1 + " insertado");
 							    	}
 							     }
 					     else {
@@ -215,11 +215,12 @@ double tot,tot1,tot2,res,res1,res2,totalsiniva,totaliva,totaldesiva;
 							    iv=ven.getIvaventa();
 							    dtv=ven.getTotalventa();
 							    dvv=ven.getValorventa();
-							    dd=new DetalleVentaDTO(can, cv, codpro, total3, iva, iva);
+							    long codpro2=Long.parseLong(request.getParameter("codigo2"));
+							    dd=new DetalleVentaDTO(can, cv, codpro2, totaliva, totalsiniva, totaldesiva);
 							    dedao=new DetalleVentaDAO();
 							    x=dedao.Inserta_Cliente(dd);
 							    if(x) {
-							    	JOptionPane.showMessageDialog(null, "detalle insertado");
+							    	JOptionPane.showMessageDialog(null,  "Producto "+ codpro2 + " insertado");
 							    	response.sendRedirect("vistados.jsp");
 							    }
 						 }

@@ -8,8 +8,8 @@ public class DetalleVentaDTO {
 	private double valortotal;
 	private double valorventa;
 	private double valoriva;
-	public DetalleVentaDTO(int cantidadproducto, long codigoventa, long codigoproducto, double valortotal,
-			double valorventa, double valoriva) {
+	public DetalleVentaDTO(int cantidadproducto, long codigoventa, long codigoproducto, double valoriva,
+			double valorventa, double valortotal) {
 		this.cantidadproducto = cantidadproducto;
 		this.codigoventa = codigoventa;
 		this.codigoproducto = codigoproducto;

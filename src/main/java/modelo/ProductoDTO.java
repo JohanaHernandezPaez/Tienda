@@ -21,6 +21,9 @@ public class ProductoDTO {
 		super();
 		this.codigoproducto = codigoproducto;
 	}
+	public ProductoDTO(String nombreproducto) {
+		this.nombreproducto = nombreproducto;
+	}
 	public long getCodigoproducto() {
 		return codigoproducto;
 	}
