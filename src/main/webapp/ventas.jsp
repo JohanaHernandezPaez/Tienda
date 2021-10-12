@@ -28,6 +28,7 @@ body {
 		</div>
 	</header>
 <body>
+
 	<section>
 	<main>
 		<fieldset>
@@ -94,18 +95,15 @@ body {
 								name="total" value="Enviar venta" class="btns"></td>
 						</tr>
 						<tr>
-						<td colspan="5"><input type="text" name="cu" value="${vs.getCedula_Usuario()}" class="txtField_01" ></td>
+						<td colspan="5"><input type="hidden" name="cu" value="${datos.getCedula_usuario()}" class="txtField_01" ></td>
 						</tr>
 						
 					</tbody>
 
 				</table>
 
-				
-
-
-
 			</form>
+			<a href="vistados.jsp"><img src="img/atras1.png"  ></a>
 			</div>
 
 		</fieldset>

@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@page import="jakarta.servlet.http.HttpSession" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <link href="css/styles.css" type="text/css" rel="stylesheet" />
-<title>Segunda Vista</title>
+<title>Menú Principal</title>
 <style>
 body {
   background-image: url('img/bg_01.jpg');
@@ -16,19 +17,22 @@ body {
 </style>
 </head>
 <body>
-
-
-	<header id="SegundaVista" class="SegundaVista">
+<%
+HttpSession objsesion=request.getSession();
+String nombre=(String)objsesion.getAttribute("vs");
+%>
+<header id="SegundaVista" class="SegundaVista">
 		<section>
 			<h1 style="color: #9297a0">
 				Bienvenidos a la <b style="color: #13aaaa; font-weight:bold;">Tienda
-					Gen&eacute;rica</b>
+					Toretto</b>
 			</h1>
 			<main>
 			<div class="card">
 			<nav id="nav">
 				<ul>
 					<table>
+					<label><strong>Bienvenido <%=nombre%></strong></label>
 					<tr><td><li><form action ="usuarios.jsp"><input type="submit" value="Usuarios" name="btn_usu" class="btn_menuPrincipal"><a href="usuarios.jsp"><img src="img/usuarios.png" class="img_menu" ></a></form></li>
 					<li><form action ="clientes.jsp"><input type="submit" value="Clientes" name="btncli" class="btn_menuPrincipal"><a href="clientes.jsp"><img src="img/clientes.png"  class="img_menu"></a></form></li>
 					</td><td>
@@ -43,7 +47,7 @@ body {
 				</ul>
 				
 			</nav>
-		
+			<a href="login.jsp"><img src="img/atras1.png"  ></a>
 			</div>
 			
 			</main>

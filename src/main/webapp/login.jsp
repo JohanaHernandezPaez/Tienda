@@ -24,7 +24,7 @@ body {
 		<div class="cont_titulologo">
 			<h1 style="color: #9297a0">
 				Bienvenidos a la <b style="color: #13aaaa; font-weight:bold;">Tienda
-					Gen&eacute;rica</b>
+					Toretto</b>
 			</h1>
 			<div class="logo"></div>
 		</div>
@@ -46,8 +46,8 @@ body {
 						class="txtField_01"></td>
 				</tr>
 				<tr>
-					<td><input type="submit" value="Enviar" class="btns"></td>
-					<td><input type="submit" value="Cancelar" class="btns"></td>
+					<td><input type="submit" value="Enviar" name="ingresar" class="btns"></td>
+					<td><input type="submit" value="Cancelar" name="cancelar" class="btns"></td>
 				</tr>
 			</table>
 		</form>

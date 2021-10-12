@@ -7,6 +7,10 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import modelo.LoginDAO;
+import modelo.UsuariosDTO;
+
 import javax.swing.JOptionPane;
 
 
@@ -32,32 +36,46 @@ public class Servletinicio extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-	}
+response.getWriter().append("Served at: ").append(request.getContextPath());	
+}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String usuario,password;
-		usuario=request.getParameter("usuario");
-		password=request.getParameter("password");
-		//System.out.println("usuario :"+usuario);
-		//System.out.println("password :"+password);
-		
-		if  (usuario.equals("admininicial")&& password.equals("admin123456")) {
-			//System.out.println("Welcome. . . ");
-			//JOptionPane.showMessageDialog(null, "Bienvenido al programa");
-			//response.sendRedirect("wellcome.jsp");
-			//
-			response.sendRedirect("vistados.jsp?dato=");
+		HttpSession sesion=request.getSession();
+		try {
+			if(request.getParameter("ingresar")!=null) {
+			String usuario,password;
+			UsuariosDTO usudto;
+			usuario=request.getParameter("usuario");
+			password=request.getParameter("password");
+			UsuariosDTO usu=new UsuariosDTO(usuario, password);
+			LoginDAO lodao=new LoginDAO();
+			usudto=lodao.login(usu);
+			//System.out.println(usudto.getCedula_usuario());
 			
+			if  (usudto.getUsuario().equals(usuario) && usudto.getPassword().equals(password)) {
+				//System.out.println("Welcome. . . ");
+				JOptionPane.showMessageDialog(null, "Bienvenido al programa");
+				//response.sendRedirect("wellcome.jsp");
+				//primer parametro de sesion la variable de sesion, el valor usudto es el valor
+				String uss=usudto.getUsuario();
+				sesion.setAttribute("vs", uss);
+				sesion.setAttribute("datos", usudto);
+				
+				response.sendRedirect("vistados.jsp");
+				
+				
+			}else {
+				System.out.println("Error en las credenciales de acceso");
+				JOptionPane.showMessageDialog(null, "credenciales Erradas");
+				response.sendRedirect("login.jsp");}
 			
-		}else {
-			System.out.println("Error en las credenciales de acceso");
+		}
+			} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "credenciales Erradas");
 			response.sendRedirect("login.jsp");
-			
 		}	
 		
 	}

@@ -38,7 +38,7 @@ public class UsuariosDAO {
 	}
 	
 	public UsuariosDTO consultar(UsuariosDTO cedula_usuario) {
-		JOptionPane.showMessageDialog(null, cedula_usuario.getCedula_usuario());
+		//JOptionPane.showMessageDialog(null, cedula_usuario.getCedula_usuario());
 		ResultSet rs;
 		try {
 			ps=cnn.prepareStatement("SELECT * FROM usuarios WHERE cedula_usuario=?");

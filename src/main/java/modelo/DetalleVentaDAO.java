@@ -21,12 +21,12 @@ public class DetalleVentaDAO {
 		//usu=  buscarcliente(u);
 		//if(usu!=null) {
 			
-			ps =cnn.prepareStatement("Insert Into detalle_ventas(cantidad_producto,codigo_producto,codigo_venta,valor_venta,valoriva, valor_total)   value(?,?,?,?,?,?);");
+			ps =cnn.prepareStatement("Insert Into detalle_ventas(cantidad_producto,codigo_producto,codigo_venta,Valoriva, Valor_venta, Valor_total)   value(?,?,?,?,?,?);");
 			ps.setInt(1, det.getCantidadproducto());
 			ps.setLong(2, det.getCodigoproducto());
 			ps.setLong(3, det.getCodigoventa());
-			ps.setDouble(4, det.getValortotal());
-			ps.setDouble(5, det.getValoriva());
+			ps.setDouble(4, det.getValoriva());
+			ps.setDouble(5, det.getValorventa());
 		ps.setDouble(6, det.getValortotal());
 		resultado=ps.executeUpdate()>0;
 		//}

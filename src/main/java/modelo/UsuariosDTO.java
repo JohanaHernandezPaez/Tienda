@@ -10,13 +10,23 @@ public class UsuariosDTO {
 	private String password;
 	private String usuario;
 	
-	public UsuariosDTO(long cedula_usuario, String email_usuario, String nombre_usuario, String usuario, String password) {
+	public UsuariosDTO(long cedula_usuario, String email_usuario, String nombre_usuario, String password, String usuario) {
 		super();
 		this.cedula_usuario = cedula_usuario;
 		this.email_usuario = email_usuario;
 		this.nombre_usuario = nombre_usuario;
 		this.usuario = usuario;
 		this.password = password;
+		
+		
+	}
+	public UsuariosDTO(String usuario, String password) {
+		super();
+		this.usuario = usuario;
+		this.password = password;
+		
+		
+		
 	}
 	public UsuariosDTO(long cedula_usuario) {
 		this.cedula_usuario = cedula_usuario;
@@ -61,6 +71,10 @@ public class UsuariosDTO {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
+	@Override
+	public String toString() {
+		return "Usuarios_DTO [Cedula_Usuario=" + cedula_usuario + ", nombre_usuario=" + nombre_usuario
+				+ ", email_usuario=" + email_usuario + ", Usuario=" + usuario + ", Password=" + password + "]";
+	}
 	
 }
