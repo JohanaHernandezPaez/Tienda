@@ -13,6 +13,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import modelo.ClientesDAO;
+import modelo.ClientesDTO;
+import modelo.ReportesDTO;
 import modelo.UsuariosDAO;
 import modelo.VentasDAO;
 import modelo.UsuariosDTO;
@@ -52,9 +54,9 @@ public class ServletReportes extends HttpServlet {
 		//PrintWriter sirve para mostrar los datos en pantalla y enviar los datos hacia AJAX
 		PrintWriter out=response.getWriter();
 		UsuariosDAO usudao;
-		//ClientesDAO clidao;
-		//VentasDAO vendao;
-		//if(request.getParameter("cargausuarios")!=null) {
+		ClientesDAO clidao;
+		VentasDAO vendao;
+		if(request.getParameter("cargausuarios")!=null) {
 		usudao=new UsuariosDAO();
 		ArrayList<UsuariosDTO>listausu=new ArrayList<>();
 		listausu=usudao.consultageneral();
@@ -62,6 +64,26 @@ public class ServletReportes extends HttpServlet {
 		Gson gson=new Gson();
 		System.out.println(gson.toJson(listausu));
 		out.print(gson.toJson(listausu));
-	//}
+	}
+		
+		if(request.getParameter("cargaclientes")!=null) {
+			clidao=new ClientesDAO();
+			ArrayList<ClientesDTO>listacli=new ArrayList<>();
+			listacli=clidao.consultageneral();
+			System.out.println(listacli);;
+			Gson gson=new Gson();
+			System.out.println(gson.toJson(listacli));
+			out.print(gson.toJson(listacli));
+		}
+		
+		if(request.getParameter("cargarventas")!=null) {
+			vendao=new VentasDAO();
+			ArrayList<ReportesDTO>listaven=new ArrayList<>();
+			listaven=vendao.consultageneral();
+			System.out.println(listaven);;
+			Gson gson=new Gson();
+			System.out.println(gson.toJson(listaven));
+			out.print(gson.toJson(listaven));
+		}
 	}
 }
