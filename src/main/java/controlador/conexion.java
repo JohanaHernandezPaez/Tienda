@@ -12,9 +12,11 @@ public class conexion {
 
 	public Connection conexionbd() {
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			//Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("org.mariadb.jdbc.Driver");
 			try {
-				cnn=DriverManager.getConnection("jdbc:mysql://localhost/tienda_generica","root","Beijing123");
+				//cnn=DriverManager.getConnection("jdbc:mysql://localhost/tienda","root","G@m3z1996");
+				cnn=DriverManager.getConnection("jdbc:mariadb://tiendagenericagrupo43-10-32.czo3ixoe3xoe.us-east-1.rds.amazonaws.com/Toreto_tienda","admin","123456789");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
