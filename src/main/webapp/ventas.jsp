@@ -9,16 +9,19 @@
 <meta charset="ISO-8859-1">
 <link href="css/styles.css" type="text/css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="viewport" content="width=device-width">
 <title>Gestión de ventas</title>
 <style>
 body {
   background-image: url('img/bg_02.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
 }
+
+
+
 </style>
 </head>
+
+<body>
 <header id="Encabezado" class="Encabezado">
 		<div class="cont_titulologo">
 			<h1 style="color: #9297a0">
@@ -27,18 +30,16 @@ body {
 			<div class="logo"></div>
 		</div>
 	</header>
-<body>
-
 	<section>
 	<main>
-		<fieldset>
-			<legend>Gestión Ventas</legend>
+	<!-- <fieldset>
+			<legend>Gestión Ventas</legend> -->	
 			<div class="card">
 			<form action="ServletVentas" method="post" align="center" style="margin-top:0.5em">
 				<input type="text" name="cedula" value="${cliente.getCedula_cliente()}"
 					placeholder="cedula" class="txtField_01"> <input type="text" name="nombre"
 					value="${cliente.getNombre_cliente()}" placeholder="nombre" class="txtField_01"> <input
-					type="submit" name="confirmar" class="btns">
+					type="submit" name="confirmar" class="btns" value="Completar">
 				<table>
 					<tbody>
 						<tr>
@@ -105,9 +106,9 @@ body {
 			</form>
 			<a href="vistados.jsp"><img src="img/atras1.png"  ></a>
 			</div>
-
-		</fieldset>
-	</main>
+<!-- </fieldset>-->
+	</main> 
+		
 	</section>
 
 </body>

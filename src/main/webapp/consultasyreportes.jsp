@@ -14,12 +14,11 @@
 <style>
 body {
   background-image: url('img/bg_02.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
 }
 </style>
 </head>
+
+<body>
 <header id="Encabezado" class="Encabezado">
 		<div class="cont_titulologo">
 			<h1 style="color: #9297a0">
@@ -28,15 +27,24 @@ body {
 			<div class="logo"></div>
 		</div>
 	</header>
-<body>
 
-<form action="ServletProductos" method="post" enctype="multipart/form-data">
 
-<input type="submit" name="cargar" value="Listado de Usuarios" class="btns" >
-<input type="submit" name="cargar" value="Listado de Clientes" class="btns" >
-<input type="submit" name="cargar" value="Ventas por Cliente" class="btns" >
+<main>
+
+<div class="card">
+<div style="margin:4em;">
+<form action="ServletProductos" method="post" enctype="multipart/form-data"><h1>Consulte por lista general:</h1>
+<nav>
+<ul></ul>
+<li><input type="submit" name="cargar" value="Listado de Usuarios" class="btns" style="margin-top:1em; margin-bottom:1em;"></li>
+<li><input type="submit" name="cargar" value="Listado de Clientes" class="btns" style="margin-top:1em; margin-bottom:1em;"></li>
+<li><input type="submit" name="cargar" value="Ventas por Cliente" class="btns" style="margin-top:1em; margin-bottom:1em;"></li>
+</nav>
 </form>
 <a href="vistados.jsp"><img src="img/atras1.png"  ></a>
+</div>
+</div>
 
+</main>
 </body>
 </html>

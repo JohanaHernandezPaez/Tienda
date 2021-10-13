@@ -12,9 +12,6 @@
 <style>
 body {
   background-image: url('img/bg_04.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
 }
 </style>
 </head>
@@ -81,12 +78,12 @@ body {
 
 					<tr>
 						<td><input type="submit" name="btninsPro" value="Registrar"
-							class="btns"></td>
-						<td><input type="submit" name="btnconPro" value="Consultar"
+							class="btns"></td><td>
+						<input type="submit" name="btnconPro" value="Consultar"
 							class="btns"></td>
 						<td><input type="submit" name="btnactPro" value="Actualizar"
-							class="btns"></td>
-						<td><input type="submit" name="btneliPro" value="Eliminar"
+							class="btns"></td><td>
+						<input type="submit" name="btneliPro" value="Eliminar"
 							class="btns"></td>
 					</tr>
 

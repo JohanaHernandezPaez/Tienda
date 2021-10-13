@@ -7,7 +7,12 @@ body{
     background-image: radial-gradient(rgb(10, 77, 77), rgb(10, 40, 59));
 
 }
-main {
+background{
+	background-repeat: repeat-y;
+  	background-attachment: fixed;
+  	background-size: 100% 100%;
+}
+main, centradoFlex {
     display: flex;
     justify-content: center;
 }
@@ -93,6 +98,7 @@ input{
 	text-align:center;
 	float: inline-end;
 	margin-left: 1em;
+	margin-right:1em;
 
     font-weight: 600;
     font-size: 12px;
@@ -123,6 +129,9 @@ nav a{
 nav li:hover{
 	background-color:#9297a0;
 	color:#000;
+}
+fieldset{
+	min-width: 0;
 }
 .segundaVista{
 	background-color: #c2c8d1;

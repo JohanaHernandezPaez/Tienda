@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@page import="jakarta.servlet.http.HttpSession" %>
+	<%@page import="javax.servlet.http.HttpSession" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +10,9 @@
 <style>
 body {
   background-image: url('img/bg_01.jpg');
-  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
+
 }
 </style>
 </head>
@@ -41,7 +41,7 @@ String nombre=(String)objsesion.getAttribute("vs");
 					<li><form action="productos.jsp"><input type="submit" value="Productos" name="btn_Productos" class="btn_menuPrincipal"><a href="productos.jsp"><img src="img/productos.png" class="img_menu" ></a></form></li>
 					</td><td>
 					<li><form action="ventas.jsp"><input type="submit" value="Ventas" name="btn_Ventas" class="btn_menuPrincipal"><a href="ventas.jsp"><img src="img/ventas.png" class="img_menu" ></a></form></li>
-					<li><input type="submit" value="Reportes" name="btn_Reportes" class="btn_menuPrincipal"><a href="vistados.jsp"><img src="img/informes.png"  class="img_menu"></a></li>
+					<li><input type="submit" value="Reportes" name="btn_Reportes" class="btn_menuPrincipal"><a href="consultasyreportes.jsp"><img src="img/informes.png"  class="img_menu"></a></li>
 					</td></tr></table>
 					
 				</ul>
