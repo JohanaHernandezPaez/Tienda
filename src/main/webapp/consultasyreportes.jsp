@@ -3,13 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/consultar.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="ISO-8859-1">
 <link href="css/styles.css" type="text/css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+</head>
+
 <title>Reportes y consultas</title>
 <style>
 body {
@@ -19,7 +20,6 @@ body {
   background-size: 100% 100%;
 }
 </style>
-</head>
 <header id="Encabezado" class="Encabezado">
 		<div class="cont_titulologo">
 			<h1 style="color: #9297a0">
@@ -30,12 +30,14 @@ body {
 	</header>
 <body>
 
-<form action="ServletProductos" method="post" enctype="multipart/form-data">
-
-<input type="submit" name="cargar" value="Listado de Usuarios" class="btns" >
-<input type="submit" name="cargar" value="Listado de Clientes" class="btns" >
-<input type="submit" name="cargar" value="Ventas por Cliente" class="btns" >
+<form>
+<!-- button no recarga la página por eso se pone button -->
+<input type="button" name="cargausuarios" value="Listado de Usuarios" class="btns" >
+<input type="button" name="cargar" value="Listado de Clientes" class="btns" >
+<input type="button" name="cargar" value="Ventas por Cliente" class="btns" >
 </form>
+<table id="tab"></table>
+
 <a href="vistados.jsp"><img src="img/atras1.png"  ></a>
 
 </body>

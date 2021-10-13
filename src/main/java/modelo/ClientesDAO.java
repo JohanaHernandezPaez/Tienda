@@ -3,6 +3,7 @@ package modelo;
 import controlador.conexion;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 public class ClientesDAO {
@@ -11,6 +12,7 @@ public class ClientesDAO {
 	conexion concli=new conexion();
     Connection cnn= concli.conexionbd();
 	PreparedStatement ps;
+	ResultSet rs;
 	public boolean insertarcliente(ClientesDTO Cli) {
 	int r;
     boolean dat=false;
@@ -80,6 +82,20 @@ public class ClientesDAO {
 		return x;
 	}
 
-	
+	public ArrayList<ClientesDTO> consultageneral() {
+		ArrayList<ClientesDTO>lista=new ArrayList<ClientesDTO>();
+		try {
+			ps=cnn.prepareStatement("SELECT * FROM clientes");
+			rs=ps.executeQuery();
+			while(rs.next()) {
+				clientesDTO=new ClientesDTO(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5)); 
+				lista.add(clientesDTO);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return lista;
+
+	}
 
 }
