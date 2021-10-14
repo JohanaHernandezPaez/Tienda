@@ -1,14 +1,14 @@
 $(document).ready(function() {
 	alert("json");
-		$('.cargarventas').on('click', function(){
+		$('.btnscargaventa').on('click', function(){
 		alert("clic en el boton");
 		consultarventasporcliente();
 		});
 	function consultarventasporcliente(){
 	$.ajax({
-		url: "ServletReportes",
+		url: "ServletReporteVtas",
 		type: "POST",
-		dataType: "JSON",
+		dataType: "json",
 
 		success: function(result) {
 			console.log(result);

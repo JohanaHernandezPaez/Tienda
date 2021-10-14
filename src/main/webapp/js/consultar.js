@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	alert("json");
-		$('.cargausuarios').on('click', function(){
+		$('.btnscarga').on('click', function(){
 		alert("clic en el boton");
 		consultarusuarios();
 		});
@@ -8,7 +8,7 @@ $(document).ready(function() {
 	$.ajax({
 		url: "ServletReportes",
 		type: "POST",
-		dataType: "JSON",
+		dataType: "json",
 
 		success: function(result) {
 			console.log(result);

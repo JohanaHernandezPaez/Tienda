@@ -41,13 +41,13 @@ String nombre=(String)objsesion.getAttribute("vs");
 					<li><form action="productos.jsp"><input type="submit" value="Productos" name="btn_Productos" class="btn_menuPrincipal"><a href="productos.jsp"><img src="img/productos.png" class="img_menu" ></a></form></li>
 					</td><td>
 					<li><form action="ventas.jsp"><input type="submit" value="Ventas" name="btn_Ventas" class="btn_menuPrincipal"><a href="ventas.jsp"><img src="img/ventas.png" class="img_menu" ></a></form></li>
-					<li><input type="submit" value="Reportes" name="btn_Reportes" class="btn_menuPrincipal"><a href="vistados.jsp"><img src="img/informes.png"  class="img_menu"></a></li>
+					<li><form action="consultasyreportes.jsp"><input type="submit" value="Reportes" name="btn_Reportes" class="btn_menuPrincipal"><a href="consultasyreportes.jsp"><img src="img/informes.png"  class="img_menu"></a></form></li>
 					</td></tr></table>
 					
 				</ul>
 				
 			</nav>
-			<a href="login.jsp"><img src="img/atras1.png"  ></a>
+			<a href="index.jsp"><img src="img/atras1.png"  ></a>
 			</div>
 			
 			</main>

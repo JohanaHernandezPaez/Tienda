@@ -35,9 +35,9 @@ body {
 
 <form>
 <!-- button no recarga la página por eso se pone button -->
-<input type="button" name="cargausuarios" value="Listado de Usuarios" class="btns" >
-<input type="button" name="cargaclientes" value="Listado de Clientes" class="btns" >
-<input type="button" name="cargarventas" value="Ventas por Cliente" class="btns" >
+<input type="button" name="cargausuarios" value="Listado de Usuarios" class="btnscarga" >
+<input type="button" name="cargaclientes" value="Listado de Clientes" class="btnscargacli" >
+<input type="button" name="cargarventas" value="Ventas por Cliente" class="btnscargaventa" >
 </form>
 <table id="tab"></table>
 

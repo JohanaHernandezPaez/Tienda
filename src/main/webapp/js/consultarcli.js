@@ -1,14 +1,14 @@
 $(document).ready(function() {
 	alert("json");
-		$('.cargaclientes').on('click', function(){
+		$('.btnscargacli').on('click', function(){
 		alert("clic en el boton");
 		consultarclientes();
 		});
 	function consultarclientes(){
 	$.ajax({
 		url: "ServletReportes",
-		type: "POST",
-		dataType: "JSON",
+		type: "GET",
+		dataType: "json",
 
 		success: function(result) {
 			console.log(result);
