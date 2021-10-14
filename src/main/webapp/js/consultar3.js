@@ -26,7 +26,7 @@ $(document).ready(function() {
 			for (let i of result) {
 				tabla.innerHTML += `<tr><td>${i.cedula_cliente}</td>
 				<td>${i.nombre_cliente}</td>
-				<td>${i.total}</td>
+				<td>${i.total_venta}</td>
 				</tr>`;
 
 			} 

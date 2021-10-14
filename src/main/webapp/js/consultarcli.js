@@ -26,11 +26,11 @@ $(document).ready(function() {
 			//se coloca el identificar de pesos para que reconozca el dato que se trae en el JSON
 			//se coloca codigolinea tal cual cómo esta en DTO.
 			for (let i of result) {
-				tabla.innerHTML += `<tr><td>${i.cedula_cliente}</td>
-				<td>${i.direccion_cliente}</td>
-				<td>${i.email_cliente}</td>
-				<td>${i.nombre_cliente}</td>
-				<td>${i.telefono_cliente}</td>
+				tabla.innerHTML += `<tr><td>${i.Cedula_cliente}</td>
+				<td>${i.Direccion_cliente}</td>
+				<td>${i.Email_cliente}</td>
+				<td>${i.Nombre_cliente}</td>
+				<td>${i.Telefono_cliente}</td>
 				</tr>`;
 
 			} 
