@@ -45,18 +45,19 @@ table{
 	padding: 20px;
     font-family: sans-serif, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
-	background-color: #c2c8d1;
+	/*background-color: #c2c8d1;*/
 	border-bottom-left-radius: 6px;
 	border-bottom-right-radius: 6px;
 	border-right: darkgray;
 	width: 40%;
 }
-th{
+#tab th{
 	padding: 0.5em;
-	background-color: ##13aaaa;
+	background-color: #007a7b;
 }
 td{
 	padding: 0.5em;
+	background-color: #c2c8d1;
 
 }
 
@@ -78,13 +79,17 @@ td{
 <div style="margin:4em;">
 <form action="ServletProductos" method="post" enctype="multipart/form-data"><h1>Consulte por lista general:</h1>
 <nav>
-<ul></ul>
+<ul>
 <!-- button no recarga la página por eso se pone button -->
 <li><input type="button" name="cargausuarios" value="Listado de Usuarios" class="btnscarga" style="margin-top:1em; margin-bottom:1em;"></li>
 <li><input type="button" name="cargaclientes" value="Listado de Clientes" class="btnscargacli" style="margin-top:1em; margin-bottom:1em;"></li>
-<li><input type="button" name="cargarventas" value="Ventas por Cliente" class="btnscargaventa" style="margin-top:1em; margin-bottom:1em;"></li>
+<li><input type="button" name="cargarventas" value="Ventas por Cliente" class="btnscargaventa" style="margin-top:1em; margin-bottom:1em;"></li></ul>
 </nav>
 </form>
+
+<table id="tab">
+</table>
+
 <a href="vistados.jsp"><img src="img/atras1.png"  ></a>
 </div>
 </div>
