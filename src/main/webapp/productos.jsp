@@ -32,14 +32,26 @@ String uss=(String)objsesion.getAttribute("llevausuario");
 		</div>
 	</header>
 
+<main>
 
-
-
-
-<form action="ServletProductos" method="post" enctype="multipart/form-data">
-<input type="file" name="archivo" value="" class="txtfile">
-<input type="submit" name="cargar" value="add Archivo" class="btns" >
+<div class="card">
+<div style="margin:4em;">
+<form action="ServletProductos" method="post" enctype="multipart/form-data"><h1>Cargue el archivo de los productos:</h1>
+<input type="file" name="archivo" value="" class="txtfile"style="margin-top:1em; margin-bottom:1em;">
+<input type="submit" name="cargar" value="Cargar Archivo" class="btns" style="margin-top:1em; margin-bottom:1em;">
 </form>
 <a href="vistados.jsp"><img src="img/atras1.png"  ></a>
+</div>
+</div>
+
+</main>
+
+
+
+
+
+
+
+
 </body>
 </html>

@@ -21,6 +21,26 @@ body {
   background-attachment: fixed;
   background-size: 100% 100%;
 }
+input[type=button]{
+text-decoration: none;
+	margin-left: 1em;
+    padding: 6px;
+	padding-left: 12px;
+	padding-right: 12px;
+    font-weight: 600;
+    font-size: 12px;
+	border-bottom-right-radius: 8px;
+	border-top-left-radius: 8px;
+	background-color: #13aaaa;
+    color: #000000;
+	border-style:none;
+    box-shadow: rgba(12, 12, 12, 0.75) 0px 2px 6px -5px;
+}
+input[type=button]:hover{
+background-color: #007a7b;
+    color: #000000;
+}
+
 </style>
 <header id="Encabezado" class="Encabezado">
 
@@ -33,15 +53,30 @@ body {
 	</header>
 <body>
 
-<form>
-<!-- button no recarga la página por eso se pone button -->
-<input type="button" name="cargausuarios" value="Listado de Usuarios" class="btnscarga" >
-<input type="button" name="cargaclientes" value="Listado de Clientes" class="btnscargacli" >
-<input type="button" name="cargarventas" value="Ventas por Cliente" class="btnscargaventa" >
-</form>
-<table id="tab"></table>
+<main>
 
+<div class="card">
+<div style="margin:4em;">
+<form action="ServletProductos" method="post" enctype="multipart/form-data"><h1>Consulte por lista general:</h1>
+<nav>
+<ul></ul>
+<!-- button no recarga la página por eso se pone button -->
+<li><input type="button" name="cargausuarios" value="Listado de Usuarios" class="btnscarga" style="margin-top:1em; margin-bottom:1em;"></li>
+<li><input type="button" name="cargaclientes" value="Listado de Clientes" class="btnscargacli" style="margin-top:1em; margin-bottom:1em;"></li>
+<li><input type="button" name="cargarventas" value="Ventas por Cliente" class="btnscargaventa" style="margin-top:1em; margin-bottom:1em;"></li>
+</nav>
+</form>
 <a href="vistados.jsp"><img src="img/atras1.png"  ></a>
+</div>
+</div>
+
+</main>
+
+
+
+
+
+
 
 </body>
 </html>
