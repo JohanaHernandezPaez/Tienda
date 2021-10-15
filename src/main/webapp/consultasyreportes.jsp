@@ -40,6 +40,25 @@ input[type=button]:hover{
 background-color: #007a7b;
     color: #000000;
 }
+table{
+	margin:auto;
+	padding: 20px;
+    font-family: sans-serif, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+	background-color: #c2c8d1;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	border-right: darkgray;
+	width: 40%;
+}
+th{
+	padding: 0.5em;
+	background-color: ##13aaaa;
+}
+td{
+	padding: 0.5em;
+
+}
 
 </style>
 <header id="Encabezado" class="Encabezado">
@@ -71,9 +90,6 @@ background-color: #007a7b;
 </div>
 
 </main>
-
-
-
 
 
 
