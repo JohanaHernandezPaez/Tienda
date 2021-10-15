@@ -3,7 +3,6 @@ package controlador;
 import java.io.IOException;
 
 import javax.swing.JOptionPane;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

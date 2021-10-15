@@ -41,9 +41,9 @@ public class ServletReporteVtas extends HttpServlet {
 		vendao = new VentasDAO();
 		ArrayList<ReportesDTO> listaven = new ArrayList<>();
 		listaven = vendao.consultageneral();
-		System.out.println(listaven);
+		//System.out.println(listaven);
 		Gson gson = new Gson();
-		System.out.println(gson.toJson(listaven));
+		//System.out.println(gson.toJson(listaven));
 		out.print(gson.toJson(listaven));
 	
 	}

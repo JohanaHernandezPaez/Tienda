@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	alert("json");
 		$('.btnscarga').on('click', function(){
 		alert("clic en el boton");
 		consultarusuarios();

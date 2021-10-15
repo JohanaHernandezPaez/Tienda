@@ -57,25 +57,24 @@ response.getWriter().append("Served at: ").append(request.getContextPath());
 			
 			if  (usudto.getUsuario().equals(usuario) && usudto.getPassword().equals(password)) {
 				//System.out.println("Welcome. . . ");
-				JOptionPane.showMessageDialog(null, "Bienvenido al programa");
 				//response.sendRedirect("wellcome.jsp");
 				//primer parametro de sesion la variable de sesion, el valor usudto es el valor
 				String uss=usudto.getUsuario();
+				JOptionPane.showMessageDialog(null, "Bienvenido al programa "+ uss);
 				sesion.setAttribute("vs", uss);
-				sesion.setAttribute("datos", usudto);
-				
+				sesion.setAttribute("datos", usudto);		
 				response.sendRedirect("vistados.jsp");
 				
 				
 			}else {
 				System.out.println("Error en las credenciales de acceso");
 				JOptionPane.showMessageDialog(null, "credenciales Erradas");
-				response.sendRedirect("login.jsp");}
+				response.sendRedirect("index.jsp");}
 			
 		}
 			} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "credenciales Erradas");
-			response.sendRedirect("login.jsp");
+			response.sendRedirect("index.jsp");
 		}	
 		
 	}

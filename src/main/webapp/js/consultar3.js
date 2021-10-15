@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	alert("json");
 		$('.btnscargaventa').on('click', function(){
 		alert("clic en el boton");
 		consultarventasporcliente();

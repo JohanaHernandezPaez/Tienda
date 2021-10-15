@@ -90,7 +90,6 @@ public class UsuariosDAO {
 	}
 
 	public ArrayList<UsuariosDTO> consultageneral() {
-		JOptionPane.showMessageDialog(null, "entrando a DAO");
 		ArrayList<UsuariosDTO>lista=new ArrayList<UsuariosDTO>();
 		try {
 			ps=cnn.prepareStatement("SELECT * FROM usuarios");
